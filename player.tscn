@@ -1,0 +1,100 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqpwc2t45xjdc"]
+
+[ext_resource type="Texture2D" uid="uid://b8bjjwfup3osi" path="res://assets/Immagine.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://0y3vwwbs0w24" path="res://player.gd" id="1_onrkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
+size = Vector2(121.71124, 50.03363)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dw050"]
+size = Vector2(119.90163, 50.03357)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+size = Vector2(122.18201, 49.999992)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_onrkg")
+
+[node name="faccia" type="Sprite2D" parent="."]
+self_modulate = Color(0.0666666, 1, 0, 1)
+position = Vector2(818.25, 83)
+scale = Vector2(0.22916637, 0.44)
+texture = ExtResource("1_4flbx")
+
+[node name="occhio sinistro" type="Sprite2D" parent="faccia"]
+self_modulate = Color(1, 0.07999998, 0.07999998, 1)
+position = Vector2(-33.559265, -11.249997)
+scale = Vector2(0.15254183, 0.20999983)
+texture = ExtResource("1_4flbx")
+
+[node name="occhio destro" type="Sprite2D" parent="faccia"]
+self_modulate = Color(1, 0.07999998, 0.07999998, 1)
+position = Vector2(24.906721, -10.499997)
+scale = Vector2(0.0933617, 0.13999982)
+texture = ExtResource("1_4flbx")
+
+[node name="bocca" type="Sprite2D" parent="faccia"]
+self_modulate = Color(1, 0.07999998, 0.07999998, 1)
+position = Vector2(1.091114, 11.363631)
+scale = Vector2(0.3272753, 0.15345432)
+texture = ExtResource("1_4flbx")
+
+[node name="petto e gambe" type="Sprite2D" parent="."]
+self_modulate = Color(1, 0.07999998, 0.07999998, 1)
+position = Vector2(818, 105)
+scale = Vector2(0.42172667, -0.45749995)
+texture = ExtResource("1_4flbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="petto e gambe"]
+self_modulate = Color(0.07999998, 0.81599975, 1, 1)
+position = Vector2(-21.340874, -113.66121)
+rotation = -1.5781066
+scale = Vector2(0.83855337, 0.42651612)
+texture = ExtResource("1_4flbx")
+
+[node name="Sprite2D2" type="Sprite2D" parent="petto e gambe"]
+self_modulate = Color(0, 1, 0.88333344, 1)
+position = Vector2(19.045422, -114.23242)
+rotation = -1.5781066
+scale = Vector2(0.8273664, 0.42651612)
+texture = ExtResource("1_4flbx")
+
+[node name="Sprite2D3" type="Sprite2D" parent="petto e gambe"]
+self_modulate = Color(0.887322, 0.6042811, 0.20634979, 1)
+position = Vector2(2.371148, -43.715843)
+scale = Vector2(0.7538807, 0.8183059)
+texture = ExtResource("1_4flbx")
+
+[node name="braccia" type="Sprite2D" parent="."]
+self_modulate = Color(0.84121275, 0.4604953, 0.85928386, 1)
+position = Vector2(778, 83.99996)
+rotation = 3.8404703
+scale = Vector2(0.3892669, 0.13999993)
+texture = ExtResource("1_4flbx")
+
+[node name="braccia2" type="Sprite2D" parent="."]
+self_modulate = Color(0.86548066, 0.54229593, 0.8831445, 1)
+position = Vector2(848, 113.00004)
+rotation = 1.1790549
+scale = Vector2(0.28127828, 0.13612871)
+skew = -0.0399369
+texture = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(825.6551, 157.00124)
+rotation = 1.577535
+scale = Vector2(0.37851855, -0.17987406)
+skew = 0.0011916161
+shape = SubResource("RectangleShape2D_hqtel")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2(808.6552, 156.96548)
+rotation = 1.577535
+scale = Vector2(0.38363647, -0.17987405)
+skew = 0.0011916161
+shape = SubResource("RectangleShape2D_dw050")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(818, 83)
+scale = Vector2(0.22916637, 0.44)
+shape = SubResource("RectangleShape2D_onrkg")

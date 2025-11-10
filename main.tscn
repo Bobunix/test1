@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr3d3lcwjdtea"]
+
+[ext_resource type="PackedScene" uid="uid://bqpwc2t45xjdc" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://b0b8arxti3x0k" path="res://parete/static_body_2d_2.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://byparo8fk84bu" path="res://pavimento/static_body_2d.tscn" id="3_h2yge"]
+
+[node name="Main" type="Node2D"]
+rotation = -6.2831855
+
+[node name="StaticBody2D" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(-23.99999, -48.000004)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("3_1bvp3")]
+position = Vector2(-539.99994, -354.0001)
+
+[node name="Player" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(1015, -299.99982)
+scale = Vector2(0.5, 0.5)
